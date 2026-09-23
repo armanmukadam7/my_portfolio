@@ -10,7 +10,6 @@ export type Project = {
     title: string;
     description: string;
     tags: string[];
-    accent: string;
 };
 
 export type Experience = {
@@ -29,8 +28,7 @@ export const portfolio = {
 
     email: 'armannmukadam@gmail.com',
 
-    linkedin:
-        'https://www.linkedin.com/in/arman-mukadam-b24088223/',
+    linkedin: 'https://www.linkedin.com/in/arman-mukadam-b24088223/',
 
     github: 'https://github.com/yourname',
 
@@ -45,26 +43,22 @@ export const portfolio = {
         {
             icon: 'layers' as IconName,
             title: 'Architecture',
-            text:
-                'Distributed systems, microservices, event-driven architecture and domain-driven design.',
+            text: 'Distributed systems, microservices, event-driven architecture and domain-driven design.',
         },
         {
             icon: 'cloud' as IconName,
             title: 'Cloud',
-            text:
-                'AWS, Azure and GCP with infrastructure designed for scale, resilience and cost efficiency.',
+            text: 'AWS, Azure and GCP with infrastructure designed for scale, resilience and cost efficiency.',
         },
         {
             icon: 'shield' as IconName,
             title: 'Reliability',
-            text:
-                'Security, observability, disaster recovery and zero-downtime migration strategies.',
+            text: 'Security, observability, disaster recovery and zero-downtime migration strategies.',
         },
         {
             icon: 'terminal' as IconName,
             title: 'Delivery',
-            text:
-                'CI/CD, infrastructure as code, automation and engineering practices that reduce operational friction.',
+            text: 'CI/CD, infrastructure as code, automation and engineering practices that reduce operational friction.',
         },
     ],
 
@@ -77,15 +71,7 @@ export const portfolio = {
             'Distributed systems',
             'Zero-downtime migrations',
         ],
-
-        Infrastructure: [
-            'AWS',
-            'Azure',
-            'GCP',
-            'Terraform',
-            'Kubernetes',
-        ],
-
+        Infrastructure: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes'],
         'Delivery & Operations': [
             'CI/CD',
             'Observability',
@@ -101,28 +87,24 @@ export const portfolio = {
             description:
                 'Redesigned a tightly coupled platform around independently deployable services and resilient integration patterns.',
             tags: ['Microservices', 'AWS', 'Kubernetes', 'Terraform'],
-            accent: '01',
         },
         {
             title: 'Real-time Analytics Pipeline',
             description:
                 'Designed a streaming architecture for high-volume event ingestion, processing and near-real-time analytics.',
             tags: ['Event-driven', 'Streaming', 'Cloud', 'Observability'],
-            accent: '02',
         },
         {
             title: 'Multi-region Failover Design',
             description:
                 'Designed a resilient multi-region strategy focused on availability, recovery objectives and controlled failover.',
             tags: ['HA', 'DR', 'Multi-region', 'Automation'],
-            accent: '03',
         },
         {
             title: 'Internal Developer Platform',
             description:
                 'Created reusable infrastructure and delivery patterns to standardize how engineering teams build and deploy services.',
             tags: ['Platform Engineering', 'Kubernetes', 'CI/CD', 'IaC'],
-            accent: '04',
         },
     ] satisfies Project[],
 

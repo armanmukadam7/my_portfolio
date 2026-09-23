@@ -18,7 +18,7 @@
 }
 
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
   text-decoration: none;
@@ -111,7 +111,7 @@
   gap: 9px;
   margin: 0 0 30px;
   color: #98a39b;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -128,7 +128,7 @@
 .hero h1 {
   max-width: 820px;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(52px, 7vw, 94px);
   line-height: 0.94;
   letter-spacing: -0.065em;
@@ -200,7 +200,7 @@
   border: 1px solid rgba(216, 255, 79, 0.3);
   color: #c6cec8;
   background: rgba(17, 24, 21, 0.8);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.12em;
 }
@@ -274,7 +274,7 @@
 
 .diagram-core span {
   color: #849088;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.18em;
 }
@@ -282,7 +282,7 @@
 .diagram-core strong {
   margin-top: 5px;
   color: var(--accent);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 44px;
 }
 
@@ -307,18 +307,24 @@
 .metric strong {
   display: block;
   color: var(--ink);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 37px;
   letter-spacing: -0.06em;
+}
+
+/* Shared small-caps mono label style (metric captions, footer label, experience dates) */
+.metric span,
+.footer-label,
+.experience-period {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
 }
 
 .metric span {
   display: block;
   margin-top: 5px;
-  color: var(--muted);
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  text-transform: uppercase;
 }
 
 .section {
@@ -334,15 +340,15 @@
   margin-bottom: 60px;
 }
 
-.section-heading > span {
+.section-heading>span {
   color: var(--accent-dark);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
 }
 
 .section-heading h2 {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(40px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -379,7 +385,7 @@
 
 .principle-number {
   color: var(--muted);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
 }
 
@@ -395,16 +401,22 @@
 
 .principle h3 {
   margin: 75px 0 12px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: -0.03em;
 }
 
-.principle p {
-  margin: 0;
+/* Shared muted body-copy style (principle blurbs, project blurbs, experience blurbs) */
+.principle p,
+.project p,
+.experience>div>p:last-child {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.7;
+}
+
+.principle p {
+  margin: 0;
 }
 
 .projects-section {
@@ -422,7 +434,7 @@
   color: #8e9891;
 }
 
-.projects-section .section-heading > span {
+.projects-section .section-heading>span {
   color: var(--accent);
 }
 
@@ -447,18 +459,18 @@
 
 .project-number {
   color: #657068;
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
 }
 
-.project > span:last-child {
+.project>span:last-child {
   color: var(--accent);
   font-size: 21px;
 }
 
 .project h3 {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 25px;
   letter-spacing: -0.04em;
 }
@@ -466,9 +478,6 @@
 .project p {
   max-width: 650px;
   margin: 10px 0 20px;
-  color: #929c95;
-  font-size: 13px;
-  line-height: 1.7;
 }
 
 .tags {
@@ -482,7 +491,7 @@
   padding: 6px 9px;
   border: 1px solid var(--line);
   color: var(--muted);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 9px;
 }
 
@@ -502,7 +511,7 @@
   margin: 0;
 }
 
-.skills-section .section-heading > span {
+.skills-section .section-heading>span {
   display: block;
   margin-bottom: 30px;
 }
@@ -518,7 +527,7 @@
 
 .skill-group h3 {
   margin: 0 0 18px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 18px;
 }
 
@@ -544,38 +553,31 @@
   padding: 0 0 55px 30px;
 }
 
-.experience + .experience {
+.experience+.experience {
   padding-top: 55px;
   border-top: 1px solid var(--line);
 }
 
 .experience-index {
   color: var(--accent-dark);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
 }
 
 .experience-period {
   margin: 0 0 8px;
-  color: var(--muted);
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  text-transform: uppercase;
 }
 
 .experience h3 {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 28px;
   letter-spacing: -0.04em;
 }
 
-.experience > div > p:last-child {
+.experience>div>p:last-child {
   max-width: 620px;
   margin: 13px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
 }
 
 .footer {
@@ -591,14 +593,10 @@
 .footer-label {
   display: block;
   margin-bottom: 10px;
-  color: var(--muted);
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  text-transform: uppercase;
 }
 
-.footer > div:first-child a {
-  font-family: 'Space Grotesk', sans-serif;
+.footer>div:first-child a {
+  font-family: var(--font-display);
   font-size: clamp(24px, 4vw, 44px);
   letter-spacing: -0.05em;
   text-decoration: none;
@@ -668,6 +666,7 @@
 }
 
 @media (max-width: 600px) {
+
   .header,
   .section,
   .footer {
@@ -753,7 +752,7 @@
     grid-template-columns: 38px 1fr;
   }
 
-  .project > span:last-child {
+  .project>span:last-child {
     display: none;
   }
 
