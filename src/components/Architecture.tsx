@@ -1,7 +1,7 @@
 import { portfolio } from '../data/portfolio.ts';
 import type { IconName } from '../data/portfolio.ts';
 import Section from './Section.tsx';
-// 
+
 const icons: Record<IconName, string> = {
   cloud: '☁',
   layers: '◈',
