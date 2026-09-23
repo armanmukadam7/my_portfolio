@@ -110,22 +110,16 @@ export const portfolio = {
 
     experience: [
         {
-            role: 'Senior Solutions Architect',
-            period: '2022 — Present',
+            role: 'DevOps Engineer',
+            period: '2025 — Present',
             description:
                 'Leading architecture decisions across distributed systems, cloud infrastructure, reliability and technical delivery.',
         },
         {
-            role: 'Cloud Architect',
-            period: '2019 — 2022',
+            role: 'Web Developer',
+            period: '2022 — 2024',
             description:
                 'Designed cloud-native platforms, migration strategies and infrastructure automation across modern cloud environments.',
-        },
-        {
-            role: 'Backend Engineer',
-            period: '2016 — 2019',
-            description:
-                'Built backend systems and APIs while developing a strong foundation in distributed systems and software architecture.',
         },
     ] satisfies Experience[],
 } as const;
